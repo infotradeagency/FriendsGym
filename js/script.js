@@ -560,7 +560,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (gallerySlides.length > 0) {
                 const slideWidth = gallerySlides[0].offsetWidth;
-                const gap = 20; // Gap between slides
+                const gap = parseFloat(window.getComputedStyle(galleryTrack).gap) || 0;
                 const moveDistance = (slideWidth + gap) * galleryIndex;
                 
                 galleryTrack.style.transform = `translateX(-${moveDistance}px)`;
