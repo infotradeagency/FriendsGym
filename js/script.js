@@ -538,27 +538,155 @@ document.addEventListener('DOMContentLoaded', function() {
     const gallerySlides = document.querySelectorAll('.gallery-slide');
     const galleryPrev = document.getElementById('galleryPrev');
     const galleryNext = document.getElementById('galleryNext');
-    let galleryIndex = 0;
-    const galleryVisible = 1; // Show 1 image at a time
-
-    function updateGallerySlider() {
-        const slideWidth = gallerySlides[0].offsetWidth;
-        galleryTrack.style.transform = `translateX(-${galleryIndex * slideWidth}px)`;
+    
+    if (galleryTrack && gallerySlides.length > 0 && galleryPrev && galleryNext) {
+        let galleryIndex = 0;
+        let slidesPerView = 3; // Default: show 3 images at a time
+        
+        // Calculate slides per view based on screen size
+        function calculateSlidesPerView() {
+            const width = window.innerWidth;
+            if (width <= 600) {
+                slidesPerView = 1;
+            } else if (width <= 900) {
+                slidesPerView = 2;
+            } else {
+                slidesPerView = 3;
+            }
+        }
+        
+        function updateGallerySlider() {
+            calculateSlidesPerView();
+            
+            if (gallerySlides.length > 0) {
+                const slideWidth = gallerySlides[0].offsetWidth;
+                const gap = 20; // Gap between slides
+                const moveDistance = (slideWidth + gap) * galleryIndex;
+                
+                galleryTrack.style.transform = `translateX(-${moveDistance}px)`;
+                galleryTrack.style.transition = 'transform 0.5s ease-in-out';
+                
+                // Disable buttons at boundaries
+                const maxIndex = Math.max(0, gallerySlides.length - slidesPerView);
+                galleryPrev.disabled = galleryIndex === 0;
+                galleryNext.disabled = galleryIndex >= maxIndex;
+                
+                // Add/remove disabled styling
+                if (galleryIndex === 0) {
+                    galleryPrev.style.opacity = '0.3';
+                    galleryPrev.style.cursor = 'not-allowed';
+                } else {
+                    galleryPrev.style.opacity = '1';
+                    galleryPrev.style.cursor = 'pointer';
+                }
+                
+                if (galleryIndex >= maxIndex) {
+                    galleryNext.style.opacity = '0.3';
+                    galleryNext.style.cursor = 'not-allowed';
+                } else {
+                    galleryNext.style.opacity = '1';
+                    galleryNext.style.cursor = 'pointer';
+                }
+            }
+        }
+        
+        galleryPrev.addEventListener('click', function() {
+            if (galleryIndex > 0) {
+                galleryIndex--;
+                updateGallerySlider();
+            }
+        });
+        
+        galleryNext.addEventListener('click', function() {
+            const maxIndex = Math.max(0, gallerySlides.length - slidesPerView);
+            if (galleryIndex < maxIndex) {
+                galleryIndex++;
+                updateGallerySlider();
+            }
+        });
+        
+        // Responsive: update slider on window resize
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                galleryIndex = 0; // Reset to first slide on resize
+                updateGallerySlider();
+            }, 250);
+        });
+        
+        // Initialize gallery slider
+        calculateSlidesPerView();
+        updateGallerySlider();
+        
+        // Auto-play gallery (optional)
+        let autoPlayInterval;
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(() => {
+                const maxIndex = Math.max(0, gallerySlides.length - slidesPerView);
+                if (galleryIndex < maxIndex) {
+                    galleryIndex++;
+                } else {
+                    galleryIndex = 0;
+                }
+                updateGallerySlider();
+            }, 4000); // Change slide every 4 seconds
+        }
+        
+        function stopAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+        
+        // Start auto-play
+        startAutoPlay();
+        
+        // Pause auto-play on hover
+        const gallerySection = document.querySelector('.gallery-slider');
+        if (gallerySection) {
+            gallerySection.addEventListener('mouseenter', stopAutoPlay);
+            gallerySection.addEventListener('mouseleave', startAutoPlay);
+        }
+        
+        // Keyboard navigation for gallery
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') {
+                galleryPrev.click();
+            } else if (e.key === 'ArrowRight') {
+                galleryNext.click();
+            }
+        });
+        
+        // Touch swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        if (gallerySection) {
+            gallerySection.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+            
+            gallerySection.addEventListener('touchend', function(e) {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, { passive: true });
+        }
+        
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            if (touchEndX < touchStartX - swipeThreshold) {
+                // Swipe left - next
+                galleryNext.click();
+            }
+            if (touchEndX > touchStartX + swipeThreshold) {
+                // Swipe right - previous
+                galleryPrev.click();
+            }
+        }
+        
+        console.log(`✅ Gallery initialized with ${gallerySlides.length} images`);
+    } else {
+        console.warn('⚠️ Gallery elements not found. Check your HTML structure.');
     }
-
-    galleryPrev.addEventListener('click', function() {
-        galleryIndex = (galleryIndex - 1 + gallerySlides.length) % gallerySlides.length;
-        updateGallerySlider();
-    });
-    galleryNext.addEventListener('click', function() {
-        galleryIndex = (galleryIndex + 1) % gallerySlides.length;
-        updateGallerySlider();
-    });
-
-    // Responsive: update slider on window resize
-    window.addEventListener('resize', updateGallerySlider);
-    // Initialize
-    updateGallerySlider();
 });
 
 // ===================================
