@@ -22,7 +22,7 @@
     --font-body: 'Montserrat', sans-serif;
     
     /* Spacing */
-    --section-padding: 100px 0;
+    --section-padding: 50px 0;
     --container-padding: 0 20px;
     
     /* Effects */
@@ -207,6 +207,28 @@ section {
 
 .logo .accent {
     color: var(--primary-color);
+}
+
+.logo-img {
+    height: 48px;
+    width: auto;
+    max-width: 120px;
+    display: block;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        height: 36px;
+        max-width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        height: 28px;
+        max-width: 60px;
+    }
 }
 
 .nav-menu {
@@ -1276,6 +1298,81 @@ section {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Gallery Section */
+.gallery {
+    background: var(--light-bg);
+    padding: var(--section-padding);
+}
+.gallery-slider {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gallery-track {
+    display: flex;
+    overflow: hidden;
+    width: 700px;
+    scroll-behavior: smooth;
+}
+.gallery-slide {
+    min-width: 700px;
+    transition: transform 0.5s cubic-bezier(.77,0,.18,1);
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.gallery-slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+}
+.gallery-arrow {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    transition: background 0.2s;
+    z-index: 2;
+}
+.gallery-arrow:hover {
+    background: var(--secondary-color);
+}
+.gallery-arrow-left {
+    margin-right: 10px;
+}
+.gallery-arrow-right {
+    margin-left: 10px;
+}
+@media (max-width: 900px) {
+    .gallery-track, .gallery-slide {
+        min-width: 90vw;
+        width: 90vw;
+    }
+    .gallery-slide img {
+        height: 220px;
+    }
+}
+@media (max-width: 600px) {
+    .gallery-track, .gallery-slide {
+        min-width: 98vw;
+        width: 98vw;
+    }
+    .gallery-slide img {
+        height: 140px;
+    }
 }
 
 /* ===================================

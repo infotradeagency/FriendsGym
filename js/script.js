@@ -531,6 +531,34 @@ document.addEventListener('DOMContentLoaded', function() {
     // End of JavaScript
     // ===================================
     
+    // ===================================
+    // Gallery Slider Functionality
+    // ===================================
+    const galleryTrack = document.getElementById('galleryTrack');
+    const gallerySlides = document.querySelectorAll('.gallery-slide');
+    const galleryPrev = document.getElementById('galleryPrev');
+    const galleryNext = document.getElementById('galleryNext');
+    let galleryIndex = 0;
+    const galleryVisible = 1; // Show 1 image at a time
+
+    function updateGallerySlider() {
+        const slideWidth = gallerySlides[0].offsetWidth;
+        galleryTrack.style.transform = `translateX(-${galleryIndex * slideWidth}px)`;
+    }
+
+    galleryPrev.addEventListener('click', function() {
+        galleryIndex = (galleryIndex - 1 + gallerySlides.length) % gallerySlides.length;
+        updateGallerySlider();
+    });
+    galleryNext.addEventListener('click', function() {
+        galleryIndex = (galleryIndex + 1) % gallerySlides.length;
+        updateGallerySlider();
+    });
+
+    // Responsive: update slider on window resize
+    window.addEventListener('resize', updateGallerySlider);
+    // Initialize
+    updateGallerySlider();
 });
 
 // ===================================
