@@ -1,270 +1,648 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Friends Gym | Khulna's Premier Fitness</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              colors: {
-                "primary": "#ec1313",
-                "background-light": "#f8f6f6",
-                "background-dark": "#221010",
-              },
-              fontFamily: {
-                "display": ["Space Grotesk"]
-              },
-              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-            },
-          },
-        }
-      </script>
-<style>
-        body { font-family: 'Space Grotesk', sans-serif; }
-        .glass-dark {
-            background: rgba(34, 16, 16, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(236, 19, 19, 0.2);
-        }
-        .text-outline {
-            -webkit-text-stroke: 1px rgba(255,255,255,0.3);
-            color: transparent;
-        }
-        .heavy-grid-border {
-            border: 2px solid rgba(236, 19, 19, 0.1);
-        }
-        .heavy-grid-border:hover {
-            border: 2px solid #ec1313;
-        }
-    </style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Friends Gym - Gollamari, Khulna. Where Strength Meets Dedication. Professional fitness center offering weight loss, muscle gain, and transformation programs.">
+    <meta name="keywords" content="gym, fitness, Khulna, Gollamari, weight loss, muscle gain, workout, training">
+    <meta name="author" content="Friends Gym">
+    
+    <title>Friends Gym - Gollamari, Khulna | Where Strength Meets Dedication</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-white selection:bg-primary selection:text-white">
-<!-- Navigation -->
-<nav class="fixed top-0 w-full z-50 glass-dark border-b border-white/5">
-<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-<div class="flex items-center gap-2">
-<div class="bg-primary text-white p-1 rounded">
-<span class="material-icons text-2xl">fitness_center</span>
-</div>
-<span class="text-2xl font-bold tracking-tighter uppercase italic">Friends<span class="text-primary">Gym</span></span>
-</div>
-<div class="hidden md:flex items-center gap-8 text-sm font-bold uppercase tracking-widest">
-<a class="hover:text-primary transition-colors" href="#">Home</a>
-<a class="hover:text-primary transition-colors" href="#about">Programs</a>
-<a class="hover:text-primary transition-colors" href="#why">Why Us</a>
-<a class="hover:text-primary transition-colors" href="#contact">Contact</a>
-</div>
-<button class="bg-primary hover:bg-red-700 text-white px-6 py-2 rounded font-bold uppercase tracking-tighter transition-all">
-                Join Now
-            </button>
-</div>
-</nav>
-<!-- Hero Section -->
-<section class="relative h-screen flex items-center justify-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<img alt="Strong athlete in dark gym" class="w-full h-full object-cover grayscale contrast-125" data-alt="Intense athlete training in a dark industrial gym setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNCFFeVPA_sH1BPZIGIZyr3eTpzcwXPbYPoDxlShOujttOh_uPhD7nQD2V9NYWqCsXThT__3limm0Aa6PGjT79hfvK9-q5_GrAmxsAVtwCL08mfUFMnVfaUy1bN9JvE3v-Z5vnz05W4B_EwpxC3mK8pcIdco0Cp3hijbRDsTP5L2K66TXFQPl93Jc26GK-1_CnBFBW-t88fOnWPl6QXuBhc6JKRLtks0hr1Tz9htjy21-Qmg86lAFhKbTywmy9Hj9WkxUHNPotzX_H"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/60 to-transparent"></div>
-<div class="absolute inset-0 bg-primary/5"></div>
-</div>
-<div class="relative z-10 text-center px-4">
-<h2 class="text-primary font-bold tracking-[0.5em] uppercase mb-4">Elite Training Gollamari</h2>
-<h1 class="text-7xl md:text-9xl font-extrabold uppercase tracking-tighter mb-8 leading-none">
-                FORGE YOUR <br/> <span class="text-outline">LEGACY</span>
-</h1>
-<div class="flex flex-col md:flex-row gap-4 justify-center">
-<button class="bg-primary text-white px-10 py-5 rounded-lg font-bold text-lg uppercase tracking-widest hover:scale-105 transition-transform">
-                    Start Your Trial
-                </button>
-<button class="border-2 border-white/30 text-white px-10 py-5 rounded-lg font-bold text-lg uppercase tracking-widest hover:border-primary hover:text-primary transition-all">
-                    View Programs
-                </button>
-</div>
-</div>
-<div class="absolute bottom-10 left-10 hidden lg:block">
-<div class="flex items-center gap-4 text-sm font-bold opacity-50 uppercase tracking-widest vertical-rl rotate-180">
-<span class="w-12 h-[2px] bg-primary"></span>
-<span>Follow the grind</span>
-</div>
-</div>
-</section>
-<!-- Why Choose Us Grid -->
-<section class="py-24 bg-background-dark" id="why">
-<div class="max-w-7xl mx-auto px-6">
-<div class="mb-16">
-<h3 class="text-primary font-bold uppercase tracking-widest mb-2">Why Us</h3>
-<h2 class="text-4xl md:text-5xl font-extrabold uppercase">Beyond Limits</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div class="heavy-grid-border p-10 bg-white/5 group transition-all">
-<span class="material-icons text-primary text-5xl mb-6 group-hover:scale-110 transition-transform">bolt</span>
-<h4 class="text-2xl font-bold uppercase mb-4">Elite Equipment</h4>
-<p class="text-slate-400 font-medium leading-relaxed">Top-tier commercial grade machinery from Hammer Strength and Life Fitness for peak performance.</p>
-</div>
-<div class="heavy-grid-border p-10 bg-white/5 group transition-all">
-<span class="material-icons text-primary text-5xl mb-6 group-hover:scale-110 transition-transform">groups</span>
-<h4 class="text-2xl font-bold uppercase mb-4">Expert Coaching</h4>
-<p class="text-slate-400 font-medium leading-relaxed">Certified trainers in Khulna dedicated to tracking your progress and perfecting your form.</p>
-</div>
-<div class="heavy-grid-border p-10 bg-white/5 group transition-all">
-<span class="material-icons text-primary text-5xl mb-6 group-hover:scale-110 transition-transform">timer</span>
-<h4 class="text-2xl font-bold uppercase mb-4">24/7 Access</h4>
-<p class="text-slate-400 font-medium leading-relaxed">Train on your schedule. We never sleep, so your ambition doesn't have to either.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Programs Section -->
-<section class="py-24 relative overflow-hidden" id="about">
-<div class="absolute -right-20 top-0 text-[15rem] font-black text-white/[0.02] select-none uppercase">Programs</div>
-<div class="max-w-7xl mx-auto px-6 relative z-10">
-<div class="flex justify-between items-end mb-16">
-<div>
-<h3 class="text-primary font-bold uppercase tracking-widest mb-2">Programs</h3>
-<h2 class="text-4xl md:text-5xl font-extrabold uppercase">Choose Your Discipline</h2>
-</div>
-<div class="hidden md:block">
-<button class="text-sm font-bold uppercase tracking-widest hover:text-primary flex items-center gap-2">
-                        See All <span class="material-icons">arrow_forward</span>
-</button>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-<!-- Program Card 1 -->
-<div class="group relative h-[500px] overflow-hidden rounded-xl">
-<img alt="Bodybuilding" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Heavy weightlifter lifting barbell in dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJsEhGbI8FX6_jiAShIS2WGL8TDgmZaiwOXV5Ez1U7K2ArxiAo18CRYbrZhZnBX_dmtoofBGUFU1UUiDAME2nDZ_D_uxaUhMtk2q87CmYGt3fY68gRMq3IgKZ9dblrfcfqJtELj_HV4GYhWzoe8VM9dhSmGjzxpJ-8Ey7Cby_ckrXoC-ezRADQW1uDTe3eouTHlMxtpDkCaEIx4R-fbC0jEPqyL6lb1LnF_PD7OUgAPQAwhk9xOEEbfy3ZbQLCUSFX7AQtbYQ6Stde"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
-<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<div class="absolute bottom-0 left-0 p-8">
-<h4 class="text-3xl font-black uppercase tracking-tighter leading-none mb-2">Strength</h4>
-<p class="text-sm font-bold uppercase tracking-widest text-primary">Power &amp; Mass</p>
-</div>
-</div>
-<!-- Program Card 2 -->
-<div class="group relative h-[500px] overflow-hidden rounded-xl">
-<img alt="Cardio" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Female runner on treadmill with red neon lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQuU8ozekiCM5ieoFH5TGX96F4CYUgn5WyS8R7VZ2LONm98prpt8nT2mCbOHS7F2QOF0SIloEPmEZ8ri3h83Rjj_qMlT7AUSA_z0LiTsSrfLPySnO-Cg31QODCJtmRmpmOggs8OR7UYJoPHdFgCxhvy8s8fzjXHVaO0aOG9wXu7t15PHnX4UQ_dHDQsZdmwRv69xlrcl4WPTERcEY6G4VY7w6xv7nnSu4eNViV772fMLhVnfuRHQMTz3ZAnb6X8CoYE6BcTvdI7mlq"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
-<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<div class="absolute bottom-0 left-0 p-8">
-<h4 class="text-3xl font-black uppercase tracking-tighter leading-none mb-2">Cardio</h4>
-<p class="text-sm font-bold uppercase tracking-widest text-primary">High Intensity</p>
-</div>
-</div>
-<!-- Program Card 3 -->
-<div class="group relative h-[500px] overflow-hidden rounded-xl">
-<img alt="Yoga" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Person practicing advanced yoga pose in dark studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcy27XByefLrxrvcMn1t5v1TgXe56DWYAR-JxTxqCA9c_xfQihrM1GFVua-yRwoDeT5eCt3qLFyVGeIJORt85JnY9dXew8SxDvbqcx6x6IqunpIgABSz2LaMgppUD0sRjI2NWJL94vvrWZJtjXhcHoPIRaUpVwUQYKVEyW5TwH1SlRuotigVhHn-HM3gCjFnIp_CQ8UyNPLCsKOwwrOTsHGLmIkUBqygheUPoYY_9TmNrNbrw8ZtUG-tUEW4Grg5eVdnrXKXyq9Qay"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
-<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<div class="absolute bottom-0 left-0 p-8">
-<h4 class="text-3xl font-black uppercase tracking-tighter leading-none mb-2">Flex</h4>
-<p class="text-sm font-bold uppercase tracking-widest text-primary">Yoga &amp; Balance</p>
-</div>
-</div>
-<!-- Program Card 4 -->
-<div class="group relative h-[500px] overflow-hidden rounded-xl">
-<img alt="MMA" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Two people boxing in training gear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlQHTpoIbrC4ri_wYUx9NtPzI7eRK2re7oHNuvcbLbjTujzmtGfGEK6WfzyTCat1iAmfZCg89eGpY9AdKFbjhUAI2fbF5yf2D5LU5S2ZVxpJyyCqeeQwBzEg9G4CDPkyArNnl6KimNIsmpGvoYjbTTttAll5ebUacvCIZwt86S-1bBxmWYf3QnOhiFNnozWz16dy2SKETsYd6v4bYmOtTNmDPoJezkWbRr7UVVtSU1Vxe6Vjv1Mz-9InQvznvh6pEDW-zGiaHTNsZk"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
-<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<div class="absolute bottom-0 left-0 p-8">
-<h4 class="text-3xl font-black uppercase tracking-tighter leading-none mb-2">Combat</h4>
-<p class="text-sm font-bold uppercase tracking-widest text-primary">Boxing &amp; MMA</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Motivational Banner -->
-<section class="py-32 relative bg-primary">
-<div class="absolute inset-0 overflow-hidden">
-<div class="text-[20rem] font-black text-black/10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none uppercase whitespace-nowrap">
-                NO EXCUSES
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-dumbbell"></i>
+                <span>FRIENDS<span class="accent">GYM</span></span>
             </div>
-</div>
-<div class="max-w-4xl mx-auto text-center relative z-10 px-6">
-<h2 class="text-5xl md:text-7xl font-extrabold uppercase tracking-tighter text-white mb-8">Ready to transform your life?</h2>
-<p class="text-xl md:text-2xl font-medium text-white/80 mb-12">The first step is always the hardest. We make the rest possible.</p>
-<button class="bg-white text-primary px-12 py-5 rounded-full font-black uppercase tracking-widest hover:bg-background-dark hover:text-white transition-all shadow-2xl">
-                Claim Your Free Session
-            </button>
-</div>
-</section>
-<!-- Contact & Location -->
-<section class="py-24 bg-background-dark relative" id="contact">
-<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div class="glass-dark p-12 rounded-2xl relative overflow-hidden">
-<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
-<h2 class="text-4xl font-extrabold uppercase mb-8 tracking-tighter">Get In Touch</h2>
-<form class="space-y-6">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div>
-<label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Full Name</label>
-<input class="w-full bg-white/5 border border-white/10 rounded px-4 py-3 focus:outline-none focus:border-primary text-white" placeholder="John Doe" type="text"/>
-</div>
-<div>
-<label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Phone Number</label>
-<input class="w-full bg-white/5 border border-white/10 rounded px-4 py-3 focus:outline-none focus:border-primary text-white" placeholder="+880 1XXX-XXXXXX" type="tel"/>
-</div>
-</div>
-<div>
-<label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Goal</label>
-<select class="w-full bg-white/5 border border-white/10 rounded px-4 py-3 focus:outline-none focus:border-primary text-white">
-<option>Weight Loss</option>
-<option>Muscle Gain</option>
-<option>General Fitness</option>
-</select>
-</div>
-<button class="w-full bg-primary py-4 rounded font-black uppercase tracking-widest hover:bg-red-700 transition-colors">
-                        Send Request
-                    </button>
-</form>
-</div>
-<div class="space-y-12">
-<div>
-<h3 class="text-primary font-bold uppercase tracking-widest mb-4">Our Base</h3>
-<h2 class="text-4xl font-extrabold uppercase tracking-tighter mb-6">Gollamari, Khulna</h2>
-<p class="text-slate-400 text-lg max-w-md mb-8">Located at the heart of Khulna, easily accessible for all fitness enthusiasts in the city.</p>
-<div class="space-y-4">
-<div class="flex items-center gap-4">
-<span class="material-icons text-primary">location_on</span>
-<span class="font-bold">South of Gollamari Bridge, Khulna, Bangladesh</span>
-</div>
-<div class="flex items-center gap-4">
-<span class="material-icons text-primary">phone</span>
-<span class="font-bold">+880 1711-223344</span>
-</div>
-<div class="flex items-center gap-4">
-<span class="material-icons text-primary">email</span>
-<span class="font-bold">hello@friendsgym.com</span>
-</div>
-</div>
-</div>
-<div class="rounded-xl overflow-hidden h-64 grayscale contrast-125 border border-white/10">
-<img alt="Map" class="w-full h-full object-cover" data-alt="Map view of Khulna city area" data-location="Khulna" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiEeI2RteDo-MMGxJBILBo-nr1wDGGoH475MFvbgN765Ms07l-FmpFQVJ8ybKER8gJ_f9Jc_BlG3u1bKL75700tewrKEs2NTBEkiA1k1ya1ply-ZV7Q6XPqm3Y6lObrz8NzF-gVAoSoB4FakYT_RbEby86jNCz5yO3T0YoxzqaDL2EJDTmHEylIDMzpNkY9Cc936Yf-VHNrL42Voeu6Kh4ZK-wyP-vY7Xe_zuXGVoUJCMziG7a-QAzJNJk11PVfIK8Q3aMTUHjVkLk"/>
-</div>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="py-12 border-t border-white/5 bg-background-dark">
-<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
-<div class="flex items-center gap-2">
-<div class="bg-primary text-white p-1 rounded">
-<span class="material-icons text-xl">fitness_center</span>
-</div>
-<span class="text-xl font-bold tracking-tighter uppercase italic">Friends<span class="text-primary">Gym</span></span>
-</div>
-<p class="text-slate-500 text-sm font-medium">© 2024 Friends Gym Khulna. All rights reserved. Built for champions.</p>
-<div class="flex gap-6">
-<a class="text-slate-400 hover:text-primary transition-colors" href="#">Instagram</a>
-<a class="text-slate-400 hover:text-primary transition-colors" href="#">Facebook</a>
-<a class="text-slate-400 hover:text-primary transition-colors" href="#">Twitter</a>
-</div>
-</div>
-</footer>
-</body></html>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#features" class="nav-link">Why Us</a></li>
+                    <li><a href="#programs" class="nav-link">Programs</a></li>
+                    <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                    <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <a href="tel:01810187300" class="btn btn-primary nav-btn">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text">
+                    <div class="hero-label">GOLLAMARI, KHULNA</div>
+                    <h1 class="hero-title">
+                        FRIENDS<br>
+                        <span class="accent-text">GYM</span>
+                    </h1>
+                    <p class="hero-subtitle">WHERE STRENGTH MEETS DEDICATION</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary btn-large">
+                            <i class="fas fa-bolt"></i> Join Now
+                        </a>
+                        <a href="#trial" class="btn btn-secondary btn-large">
+                            <i class="fas fa-gift"></i> Free Trial
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">GET TO KNOW US</span>
+                <h2 class="section-title">ABOUT <span class="accent-text">FRIENDS GYM</span></h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Welcome to Friends Gym – Gollamari, Khulna.</h3>
+                    <p>Friends Gym is not just a fitness center — it's a <strong>community of warriors</strong> committed to transforming their bodies and minds. Located in the heart of Gollamari, Khulna, we are one of the most trusted and result-driven gyms in the city.</p>
+                    
+                    <div class="mission-box">
+                        <h4><i class="fas fa-bullseye"></i> Our Mission:</h4>
+                        <p>To build strong bodies, strong character, discipline, and confidence. <strong>Fitness is a lifestyle.</strong></p>
+                    </div>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Active Members</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Expert Trainers</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">Success Stories</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <div class="image-frame">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=1000&fit=crop" alt="Gym Training">
+                        <div class="image-badge">
+                            <i class="fas fa-trophy"></i>
+                            <span>Best in Khulna</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">WHAT SETS US APART</span>
+                <h2 class="section-title">WHY CHOOSE <span class="accent-text">US</span></h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Professional Coaches</h3>
+                    <p>Experienced and certified trainers dedicated to your success</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Modern Equipment</h3>
+                    <p>State-of-the-art machines and safe training environment</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Fat to Fit Programs</h3>
+                    <p>Proven transformation programs that deliver real results</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Strength Training</h3>
+                    <p>Build muscle and increase your overall strength</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3>Weight Loss & Cardio</h3>
+                    <p>Effective cardio programs for fat burning and endurance</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <h3>Personalized Plans</h3>
+                    <p>Custom diet and workout plans tailored to your goals</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Motivating Community</h3>
+                    <p>Friendly atmosphere that keeps you inspired daily</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Safe Environment</h3>
+                    <p>Clean, hygienic, and secure facility for all members</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Programs Section -->
+    <section class="programs" id="programs">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">TRAINING OPTIONS</span>
+                <h2 class="section-title">OUR <span class="accent-text">PROGRAMS</span></h2>
+            </div>
+            
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop" alt="Weight Loss Program">
+                        <div class="program-overlay">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                    </div>
+                    <div class="program-content">
+                        <h3>Weight Loss Program</h3>
+                        <p>Shed those extra pounds with our scientifically designed fat-burning routines and nutrition guidance.</p>
+                        <a href="#contact" class="program-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-image">
+                        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&h=400&fit=crop" alt="Muscle Gain Program">
+                        <div class="program-overlay">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                    </div>
+                    <div class="program-content">
+                        <h3>Muscle Gain Program</h3>
+                        <p>Build lean muscle mass and strength with progressive overload training and proper nutrition.</p>
+                        <a href="#contact" class="program-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-image">
+                        <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&h=400&fit=crop" alt="Fat to Fit Transformation">
+                        <div class="program-overlay">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                    </div>
+                    <div class="program-content">
+                        <h3>Fat to Fit Transformation</h3>
+                        <p>Complete body transformation program combining cardio, strength training, and diet management.</p>
+                        <a href="#contact" class="program-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-image">
+                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=400&fit=crop" alt="Beginner Friendly Training">
+                        <div class="program-overlay">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                    </div>
+                    <div class="program-content">
+                        <h3>Beginner Friendly Training</h3>
+                        <p>Start your fitness journey with proper form, technique, and a supportive environment.</p>
+                        <a href="#contact" class="program-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-image">
+                        <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&h=400&fit=crop" alt="Advanced Strength Program">
+                        <div class="program-overlay">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                    </div>
+                    <div class="program-content">
+                        <h3>Advanced Strength Program</h3>
+                        <p>Take your strength to the next level with powerlifting and advanced bodybuilding techniques.</p>
+                        <a href="#contact" class="program-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-image">
+                        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&h=400&fit=crop" alt="Competition Preparation">
+                        <div class="program-overlay">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                    </div>
+                    <div class="program-content">
+                        <h3>Competition Preparation</h3>
+                        <p>Get stage-ready with professional coaching for bodybuilding and fitness competitions.</p>
+                        <a href="#contact" class="program-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">MEMBERSHIP PLANS</span>
+                <h2 class="section-title">CHOOSE YOUR <span class="accent-text">PLAN</span></h2>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>BASIC</h3>
+                        <div class="price">
+                            <span class="currency">৳</span>
+                            <span class="amount">1,500</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Gym Access (Mon-Sat)</li>
+                        <li><i class="fas fa-check"></i> Basic Equipment Use</li>
+                        <li><i class="fas fa-check"></i> Locker Facility</li>
+                        <li><i class="fas fa-check"></i> General Guidance</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Personal Trainer</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Diet Plan</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary btn-block">Get Started</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="popular-badge">MOST POPULAR</div>
+                    <div class="pricing-header">
+                        <h3>STANDARD</h3>
+                        <div class="price">
+                            <span class="currency">৳</span>
+                            <span class="amount">2,500</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Gym Access (All Days)</li>
+                        <li><i class="fas fa-check"></i> All Equipment Access</li>
+                        <li><i class="fas fa-check"></i> Locker Facility</li>
+                        <li><i class="fas fa-check"></i> Group Training Sessions</li>
+                        <li><i class="fas fa-check"></i> Basic Diet Plan</li>
+                        <li><i class="fas fa-check"></i> Monthly Assessment</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary btn-block">Get Started</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>PREMIUM</h3>
+                        <div class="price">
+                            <span class="currency">৳</span>
+                            <span class="amount">4,000</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 24/7 Gym Access</li>
+                        <li><i class="fas fa-check"></i> All Equipment + Extras</li>
+                        <li><i class="fas fa-check"></i> Personal Locker</li>
+                        <li><i class="fas fa-check"></i> Personal Trainer (12 Sessions)</li>
+                        <li><i class="fas fa-check"></i> Customized Diet Plan</li>
+                        <li><i class="fas fa-check"></i> Weekly Progress Tracking</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary btn-block">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Trial CTA Section -->
+    <section class="trial-cta" id="trial">
+        <div class="trial-overlay"></div>
+        <div class="container">
+            <div class="trial-content">
+                <h2 class="trial-title">JOIN THE G.O.A.T<br>OF FITNESS IN <span class="accent-text">KHULNA</span></h2>
+                <p class="trial-text">TRAIN HARD. STAY STRONG. BECOME UNSTOPPABLE.</p>
+                <a href="#contact" class="btn btn-primary btn-large btn-glow">
+                    <i class="fas fa-bolt"></i> Book Free Trial
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">SUCCESS STORIES</span>
+                <h2 class="section-title">WHAT OUR <span class="accent-text">MEMBERS SAY</span></h2>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Friends Gym transformed my life! Lost 20kg in 6 months. The trainers are incredibly supportive and the environment is motivating. Best decision I ever made!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Rakib Hasan</h4>
+                            <span>Weight Loss Transformation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"I've been training here for 2 years. The equipment is top-notch, trainers are professional, and the community feels like family. Highly recommend for serious fitness enthusiasts!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Nusrat Jahan</h4>
+                            <span>Strength Training Member</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Started as a complete beginner and now I'm competing! The personalized training and diet plans made all the difference. Friends Gym is the real deal in Khulna!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Imran Ahmed</h4>
+                            <span>Competition Athlete</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Location Section -->
+    <section class="location" id="location">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">VISIT US</span>
+                <h2 class="section-title">OUR <span class="accent-text">LOCATION</span></h2>
+            </div>
+            
+            <div class="location-content">
+                <div class="location-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>Address</h3>
+                            <p>Gollamari, Khulna<br>Bangladesh</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>Hotline</h3>
+                            <p><a href="tel:01810187300">01810-187300</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>Opening Hours</h3>
+                            <p>Mon - Sat: 6:00 AM - 10:00 PM<br>Sunday: 8:00 AM - 8:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="location-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.6895864516743!2d89.56454231495908!3d22.80915238506567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff9015b1e7c5c1%3A0x7c5a0e7c5e7c5e7c!2sGollamari%2C%20Khulna!5e0!3m2!1sen!2sbd!4v1234567890123!5m2!1sen!2sbd" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">GET IN TOUCH</span>
+                <h2 class="section-title">CONTACT <span class="accent-text">US</span></h2>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" id="name" placeholder="Your Name" required>
+                            <i class="fas fa-user"></i>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" placeholder="Email Address" required>
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea name="message" id="message" rows="5" placeholder="Your Message" required></textarea>
+                            <i class="fas fa-comment"></i>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block btn-large">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="contact-sidebar">
+                    <h3>Ready to Transform?</h3>
+                    <p>Join hundreds of members who have already transformed their lives at Friends Gym. Start your journey today!</p>
+                    
+                    <div class="contact-methods">
+                        <a href="tel:01810187300" class="contact-method">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>Call: 01810-187300</span>
+                        </a>
+                        
+                        <div class="social-links">
+                            <h4>Follow Us</h4>
+                            <div class="social-icons">
+                                <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                                <a href="#" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-dumbbell"></i>
+                        <span>FRIENDS<span class="accent">GYM</span></span>
+                    </div>
+                    <p>Building strong bodies, strong minds, and strong characters. Your transformation begins here.</p>
+                    <div class="footer-social">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Programs</h3>
+                    <ul class="footer-links">
+                        <li><a href="#programs">Weight Loss</a></li>
+                        <li><a href="#programs">Muscle Gain</a></li>
+                        <li><a href="#programs">Fat to Fit</a></li>
+                        <li><a href="#programs">Strength Training</a></li>
+                        <li><a href="#programs">Competition Prep</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Gollamari, Khulna</li>
+                        <li><i class="fas fa-phone"></i> 01810-187300</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 6AM - 10PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Friends Gym - Gollamari, Khulna. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
