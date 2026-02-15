@@ -535,11 +535,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Gallery Slider Functionality
     // ===================================
     const galleryTrack = document.getElementById('galleryTrack');
+    const galleryViewport = document.querySelector('.gallery-viewport');
     const gallerySlides = document.querySelectorAll('.gallery-slide');
     const galleryPrev = document.getElementById('galleryPrev');
     const galleryNext = document.getElementById('galleryNext');
     
-    if (galleryTrack && gallerySlides.length > 0 && galleryPrev && galleryNext) {
+    if (galleryTrack && galleryViewport && gallerySlides.length > 0 && galleryPrev && galleryNext) {
         let galleryIndex = 0;
         let slidesPerView = 3; // Default: show 3 images at a time
         
@@ -559,8 +560,15 @@ document.addEventListener('DOMContentLoaded', function() {
             calculateSlidesPerView();
             
             if (gallerySlides.length > 0) {
-                const slideWidth = gallerySlides[0].offsetWidth;
                 const gap = parseFloat(window.getComputedStyle(galleryTrack).gap) || 0;
+                const viewportWidth = galleryViewport.clientWidth;
+                const slideWidth = (viewportWidth - gap * (slidesPerView - 1)) / slidesPerView;
+                
+                gallerySlides.forEach(slide => {
+                    slide.style.flex = `0 0 ${slideWidth}px`;
+                    slide.style.minWidth = `${slideWidth}px`;
+                });
+                
                 const moveDistance = (slideWidth + gap) * galleryIndex;
                 
                 galleryTrack.style.transform = `translateX(-${moveDistance}px)`;
