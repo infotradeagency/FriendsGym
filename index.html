@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Friends Gym | Khulna's Premier Fitness</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#ec1313",
+                "background-light": "#f8f6f6",
+                "background-dark": "#221010",
+              },
+              fontFamily: {
+                "display": ["Space Grotesk"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+<style>
+        body { font-family: 'Space Grotesk', sans-serif; }
+        .glass-dark {
+            background: rgba(34, 16, 16, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(236, 19, 19, 0.2);
+        }
+        .text-outline {
+            -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+            color: transparent;
+        }
+        .heavy-grid-border {
+            border: 2px solid rgba(236, 19, 19, 0.1);
+        }
+        .heavy-grid-border:hover {
+            border: 2px solid #ec1313;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-white selection:bg-primary selection:text-white">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 glass-dark border-b border-white/5">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="bg-primary text-white p-1 rounded">
+<span class="material-icons text-2xl">fitness_center</span>
+</div>
+<span class="text-2xl font-bold tracking-tighter uppercase italic">Friends<span class="text-primary">Gym</span></span>
+</div>
+<div class="hidden md:flex items-center gap-8 text-sm font-bold uppercase tracking-widest">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<a class="hover:text-primary transition-colors" href="#about">Programs</a>
+<a class="hover:text-primary transition-colors" href="#why">Why Us</a>
+<a class="hover:text-primary transition-colors" href="#contact">Contact</a>
+</div>
+<button class="bg-primary hover:bg-red-700 text-white px-6 py-2 rounded font-bold uppercase tracking-tighter transition-all">
+                Join Now
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Strong athlete in dark gym" class="w-full h-full object-cover grayscale contrast-125" data-alt="Intense athlete training in a dark industrial gym setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNCFFeVPA_sH1BPZIGIZyr3eTpzcwXPbYPoDxlShOujttOh_uPhD7nQD2V9NYWqCsXThT__3limm0Aa6PGjT79hfvK9-q5_GrAmxsAVtwCL08mfUFMnVfaUy1bN9JvE3v-Z5vnz05W4B_EwpxC3mK8pcIdco0Cp3hijbRDsTP5L2K66TXFQPl93Jc26GK-1_CnBFBW-t88fOnWPl6QXuBhc6JKRLtks0hr1Tz9htjy21-Qmg86lAFhKbTywmy9Hj9WkxUHNPotzX_H"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/60 to-transparent"></div>
+<div class="absolute inset-0 bg-primary/5"></div>
+</div>
+<div class="relative z-10 text-center px-4">
+<h2 class="text-primary font-bold tracking-[0.5em] uppercase mb-4">Elite Training Gollamari</h2>
+<h1 class="text-7xl md:text-9xl font-extrabold uppercase tracking-tighter mb-8 leading-none">
+                FORGE YOUR <br/> <span class="text-outline">LEGACY</span>
+</h1>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<button class="bg-primary text-white px-10 py-5 rounded-lg font-bold text-lg uppercase tracking-widest hover:scale-105 transition-transform">
+                    Start Your Trial
+                </button>
+<button class="border-2 border-white/30 text-white px-10 py-5 rounded-lg font-bold text-lg uppercase tracking-widest hover:border-primary hover:text-primary transition-all">
+                    View Programs
+                </button>
+</div>
+</div>
+<div class="absolute bottom-10 left-10 hidden lg:block">
+<div class="flex items-center gap-4 text-sm font-bold opacity-50 uppercase tracking-widest vertical-rl rotate-180">
+<span class="w-12 h-[2px] bg-primary"></span>
+<span>Follow the grind</span>
+</div>
+</div>
+</section>
+<!-- Why Choose Us Grid -->
+<section class="py-24 bg-background-dark" id="why">
+<div class="max-w-7xl mx-auto px-6">
+<div class="mb-16">
+<h3 class="text-primary font-bold uppercase tracking-widest mb-2">Why Us</h3>
+<h2 class="text-4xl md:text-5xl font-extrabold uppercase">Beyond Limits</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="heavy-grid-border p-10 bg-white/5 group transition-all">
+<span class="material-icons text-primary text-5xl mb-6 group-hover:scale-110 transition-transform">bolt</span>
+<h4 class="text-2xl font-bold uppercase mb-4">Elite Equipment</h4>
+<p class="text-slate-400 font-medium leading-relaxed">Top-tier commercial grade machinery from Hammer Strength and Life Fitness for peak performance.</p>
+</div>
+<div class="heavy-grid-border p-10 bg-white/5 group transition-all">
+<span class="material-icons text-primary text-5xl mb-6 group-hover:scale-110 transition-transform">groups</span>
+<h4 class="text-2xl font-bold uppercase mb-4">Expert Coaching</h4>
+<p class="text-slate-400 font-medium leading-relaxed">Certified trainers in Khulna dedicated to tracking your progress and perfecting your form.</p>
+</div>
+<div class="heavy-grid-border p-10 bg-white/5 group transition-all">
+<span class="material-icons text-primary text-5xl mb-6 group-hover:scale-110 transition-transform">timer</span>
+<h4 class="text-2xl font-bold uppercase mb-4">24/7 Access</h4>
+<p class="text-slate-400 font-medium leading-relaxed">Train on your schedule. We never sleep, so your ambition doesn't have to either.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Programs Section -->
+<section class="py-24 relative overflow-hidden" id="about">
+<div class="absolute -right-20 top-0 text-[15rem] font-black text-white/[0.02] select-none uppercase">Programs</div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h3 class="text-primary font-bold uppercase tracking-widest mb-2">Programs</h3>
+<h2 class="text-4xl md:text-5xl font-extrabold uppercase">Choose Your Discipline</h2>
+</div>
+<div class="hidden md:block">
+<button class="text-sm font-bold uppercase tracking-widest hover:text-primary flex items-center gap-2">
+                        See All <span class="material-icons">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<!-- Program Card 1 -->
+<div class="group relative h-[500px] overflow-hidden rounded-xl">
+<img alt="Bodybuilding" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Heavy weightlifter lifting barbell in dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJsEhGbI8FX6_jiAShIS2WGL8TDgmZaiwOXV5Ez1U7K2ArxiAo18CRYbrZhZnBX_dmtoofBGUFU1UUiDAME2nDZ_D_uxaUhMtk2q87CmYGt3fY68gRMq3IgKZ9dblrfcfqJtELj_HV4GYhWzoe8VM9dhSmGjzxpJ-8Ey7Cby_ckrXoC-ezRADQW1uDTe3eouTHlMxtpDkCaEIx4R-fbC0jEPqyL6lb1LnF_PD7OUgAPQAwhk9xOEEbfy3ZbQLCUSFX7AQtbYQ6Stde"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h4 class="text-3xl font-black uppercase tracking-tighter leading-none mb-2">Strength</h4>
+<p class="text-sm font-bold uppercase tracking-widest text-primary">Power &amp; Mass</p>
+</div>
+</div>
+<!-- Program Card 2 -->
+<div class="group relative h-[500px] overflow-hidden rounded-xl">
+<img alt="Cardio" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Female runner on treadmill with red neon lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQuU8ozekiCM5ieoFH5TGX96F4CYUgn5WyS8R7VZ2LONm98prpt8nT2mCbOHS7F2QOF0SIloEPmEZ8ri3h83Rjj_qMlT7AUSA_z0LiTsSrfLPySnO-Cg31QODCJtmRmpmOggs8OR7UYJoPHdFgCxhvy8s8fzjXHVaO0aOG9wXu7t15PHnX4UQ_dHDQsZdmwRv69xlrcl4WPTERcEY6G4VY7w6xv7nnSu4eNViV772fMLhVnfuRHQMTz3ZAnb6X8CoYE6BcTvdI7mlq"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h4 class="text-3xl font-black uppercase tracking-tighter leading-none mb-2">Cardio</h4>
+<p class="text-sm font-bold uppercase tracking-widest text-primary">High Intensity</p>
+</div>
+</div>
+<!-- Program Card 3 -->
+<div class="group relative h-[500px] overflow-hidden rounded-xl">
+<img alt="Yoga" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Person practicing advanced yoga pose in dark studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcy27XByefLrxrvcMn1t5v1TgXe56DWYAR-JxTxqCA9c_xfQihrM1GFVua-yRwoDeT5eCt3qLFyVGeIJORt85JnY9dXew8SxDvbqcx6x6IqunpIgABSz2LaMgppUD0sRjI2NWJL94vvrWZJtjXhcHoPIRaUpVwUQYKVEyW5TwH1SlRuotigVhHn-HM3gCjFnIp_CQ8UyNPLCsKOwwrOTsHGLmIkUBqygheUPoYY_9TmNrNbrw8ZtUG-tUEW4Grg5eVdnrXKXyq9Qay"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h4 class="text-3xl font-black uppercase tracking-tighter leading-none mb-2">Flex</h4>
+<p class="text-sm font-bold uppercase tracking-widest text-primary">Yoga &amp; Balance</p>
+</div>
+</div>
+<!-- Program Card 4 -->
+<div class="group relative h-[500px] overflow-hidden rounded-xl">
+<img alt="MMA" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Two people boxing in training gear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlQHTpoIbrC4ri_wYUx9NtPzI7eRK2re7oHNuvcbLbjTujzmtGfGEK6WfzyTCat1iAmfZCg89eGpY9AdKFbjhUAI2fbF5yf2D5LU5S2ZVxpJyyCqeeQwBzEg9G4CDPkyArNnl6KimNIsmpGvoYjbTTttAll5ebUacvCIZwt86S-1bBxmWYf3QnOhiFNnozWz16dy2SKETsYd6v4bYmOtTNmDPoJezkWbRr7UVVtSU1Vxe6Vjv1Mz-9InQvznvh6pEDW-zGiaHTNsZk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h4 class="text-3xl font-black uppercase tracking-tighter leading-none mb-2">Combat</h4>
+<p class="text-sm font-bold uppercase tracking-widest text-primary">Boxing &amp; MMA</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Motivational Banner -->
+<section class="py-32 relative bg-primary">
+<div class="absolute inset-0 overflow-hidden">
+<div class="text-[20rem] font-black text-black/10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none uppercase whitespace-nowrap">
+                NO EXCUSES
+            </div>
+</div>
+<div class="max-w-4xl mx-auto text-center relative z-10 px-6">
+<h2 class="text-5xl md:text-7xl font-extrabold uppercase tracking-tighter text-white mb-8">Ready to transform your life?</h2>
+<p class="text-xl md:text-2xl font-medium text-white/80 mb-12">The first step is always the hardest. We make the rest possible.</p>
+<button class="bg-white text-primary px-12 py-5 rounded-full font-black uppercase tracking-widest hover:bg-background-dark hover:text-white transition-all shadow-2xl">
+                Claim Your Free Session
+            </button>
+</div>
+</section>
+<!-- Contact & Location -->
+<section class="py-24 bg-background-dark relative" id="contact">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="glass-dark p-12 rounded-2xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
+<h2 class="text-4xl font-extrabold uppercase mb-8 tracking-tighter">Get In Touch</h2>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Full Name</label>
+<input class="w-full bg-white/5 border border-white/10 rounded px-4 py-3 focus:outline-none focus:border-primary text-white" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Phone Number</label>
+<input class="w-full bg-white/5 border border-white/10 rounded px-4 py-3 focus:outline-none focus:border-primary text-white" placeholder="+880 1XXX-XXXXXX" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Goal</label>
+<select class="w-full bg-white/5 border border-white/10 rounded px-4 py-3 focus:outline-none focus:border-primary text-white">
+<option>Weight Loss</option>
+<option>Muscle Gain</option>
+<option>General Fitness</option>
+</select>
+</div>
+<button class="w-full bg-primary py-4 rounded font-black uppercase tracking-widest hover:bg-red-700 transition-colors">
+                        Send Request
+                    </button>
+</form>
+</div>
+<div class="space-y-12">
+<div>
+<h3 class="text-primary font-bold uppercase tracking-widest mb-4">Our Base</h3>
+<h2 class="text-4xl font-extrabold uppercase tracking-tighter mb-6">Gollamari, Khulna</h2>
+<p class="text-slate-400 text-lg max-w-md mb-8">Located at the heart of Khulna, easily accessible for all fitness enthusiasts in the city.</p>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<span class="material-icons text-primary">location_on</span>
+<span class="font-bold">South of Gollamari Bridge, Khulna, Bangladesh</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-icons text-primary">phone</span>
+<span class="font-bold">+880 1711-223344</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-icons text-primary">email</span>
+<span class="font-bold">hello@friendsgym.com</span>
+</div>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden h-64 grayscale contrast-125 border border-white/10">
+<img alt="Map" class="w-full h-full object-cover" data-alt="Map view of Khulna city area" data-location="Khulna" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiEeI2RteDo-MMGxJBILBo-nr1wDGGoH475MFvbgN765Ms07l-FmpFQVJ8ybKER8gJ_f9Jc_BlG3u1bKL75700tewrKEs2NTBEkiA1k1ya1ply-ZV7Q6XPqm3Y6lObrz8NzF-gVAoSoB4FakYT_RbEby86jNCz5yO3T0YoxzqaDL2EJDTmHEylIDMzpNkY9Cc936Yf-VHNrL42Voeu6Kh4ZK-wyP-vY7Xe_zuXGVoUJCMziG7a-QAzJNJk11PVfIK8Q3aMTUHjVkLk"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="py-12 border-t border-white/5 bg-background-dark">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2">
+<div class="bg-primary text-white p-1 rounded">
+<span class="material-icons text-xl">fitness_center</span>
+</div>
+<span class="text-xl font-bold tracking-tighter uppercase italic">Friends<span class="text-primary">Gym</span></span>
+</div>
+<p class="text-slate-500 text-sm font-medium">© 2024 Friends Gym Khulna. All rights reserved. Built for champions.</p>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">Facebook</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+</body></html>
